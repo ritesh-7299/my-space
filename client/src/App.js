@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "./auth/authUser";
+import { useEffect } from "react";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -18,9 +19,10 @@ export default function App() {
     dispatch(loginUser(data.user));
   };
 
-  if (user == null) {
+  useEffect(() => {
     getUser();
-  }
+  }, [user]);
+
   console.log("After call user=", user);
   console.log("is user null?", user == null);
   return (
