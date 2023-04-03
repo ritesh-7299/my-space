@@ -123,7 +123,7 @@ router.get("/get-image", async (req, res) => {
   });
 });
 
-router.get("/login/success", (req, res) => {
+router.get("/login/check", (req, res) => {
   if (req.user) {
     res.status(201).json({
       error: false,

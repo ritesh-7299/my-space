@@ -10,15 +10,19 @@ import { loginUser } from "./auth/authUser";
 export default function App() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
+  console.log("Before call user=", user);
+  console.log("is user null?", user == null);
   const getUser = async () => {
-    const url = `${process.env.REACT_APP_API_URL}/auth/login/success`;
+    const url = `${process.env.REACT_APP_API_URL}/auth/login/check`;
     const { data } = await axios.get(url, { withCredentials: true });
     dispatch(loginUser(data.user));
   };
+
   if (user == null) {
     getUser();
   }
-
+  console.log("After call user=", user);
+  console.log("is user null?", user == null);
   return (
     <main>
       <Routes>
