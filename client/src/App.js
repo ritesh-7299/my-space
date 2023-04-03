@@ -6,25 +6,20 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser } from "./auth/authUser";
-import { useEffect } from "react";
 
 export default function App() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-  console.log("Before call user=", user);
-  console.log("is user null?", user == null);
   const getUser = async () => {
     const url = `${process.env.REACT_APP_API_URL}/auth/login/check`;
-    const { data } = await axios.get(url, { withCredentials: true });
-    dispatch(loginUser(data.user));
+    await axios.get(url, { withCredentials: true }).then((response) => {
+      console.log(response);
+      dispatch(loginUser(data.user));
+    });
   };
-
-  useEffect(() => {
+  if (user == null) {
     getUser();
-  }, [user]);
-
-  console.log("After call user=", user);
-  console.log("is user null?", user == null);
+  }
   return (
     <main>
       <Routes>
