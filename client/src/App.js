@@ -14,7 +14,7 @@ export default function App() {
     const url = `${process.env.REACT_APP_API_URL}/auth/login/check`;
     await axios.get(url, { withCredentials: true }).then((response) => {
       console.log(response);
-      dispatch(loginUser(data.user));
+      dispatch(loginUser(response.data.user));
     });
   };
   if (user == null) {
