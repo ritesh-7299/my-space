@@ -113,9 +113,9 @@ Your project is running and you should see below screen..
 
 <h3>Ritesh Macwan - </h3>
 <ul>
-  <li>TWITTER - [https://twitter.com/ritesh_macwan7](https://twitter.com/ritesh_macwan7)</li>
-  <li>EMAIL - [riteshmacwan07@gmail.com](riteshmacwan07@gmail.com)</li>
-  <li>GITHUB - [https://github.com/ritesh-7299](https://github.com/ritesh-7299)</li>
+  <li>TWITTER - https://twitter.com/ritesh_macwan7</li>
+  <li>EMAIL - riteshmacwan07@gmail.com</li>
+  <li>GITHUB - https://github.com/ritesh-7299</li>
 </ul>
 Project Link: [https://github.com/ritesh-7299/my-space](https://github.com/ritesh-7299/my-space)
 
