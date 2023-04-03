@@ -26,16 +26,16 @@ export default function App() {
         <Route
           exact
           path="/"
-          element={user ? <Home /> : <Navigate to="/login" />}
+          element={user !== null ? <Home /> : <Navigate to="/login" />}
         />
         <Route
           exact
           path="/login"
-          element={user ? <Navigate to="/" /> : <Login />}
+          element={user !== null ? <Navigate to="/" /> : <Login />}
         />
         <Route
           path="/register"
-          element={user ? <Navigate to="/" /> : <Register />}
+          element={user !== null ? <Navigate to="/" /> : <Register />}
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
