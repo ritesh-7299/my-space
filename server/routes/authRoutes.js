@@ -31,11 +31,10 @@ router.post("/register", function (req, res) {
   if (!email || !username || !password || !confirm_password) {
     return res.status(403).json({
       error: true,
-      message: "All the fields are required!",
+      message: "All fields are required!",
     });
-    // return res.status(500).send({ error: "All the fields are required!" });
   } else if (password !== confirm_password) {
-    return res.status(500).send({ error: "Passwords aren't matching!" });
+    return res.status(403).send({ error: "Passwords aren't matching!" });
   } else {
     Promise.all([existUsername, existEmail])
       .then(() => {
@@ -68,7 +67,7 @@ router.post("/register", function (req, res) {
       })
       .catch((error) => {
         return res
-          .status(500)
+          .status(403)
           .send({ error: "Username or Email is already exists" });
       });
   }
@@ -83,7 +82,7 @@ router.post(
 );
 
 router.get("/local/login/failed", (req, res) => {
-  res.status(401).json({
+  res.status(403).json({
     error: true,
     message: "Invalid Credentials",
   });
@@ -114,7 +113,7 @@ router.get("/get-image", async (req, res) => {
   if (!data) {
     res.status(500).json({
       error: true,
-      message: "Server Internal Error",
+      message: "Internal Server Error",
     });
   }
   res.status(201).json({
@@ -137,9 +136,9 @@ router.get("/login/success", (req, res) => {
 });
 
 router.get("/login/failed", (req, res) => {
-  res.status(401).json({
+  res.status(403).json({
     error: true,
-    message: "Log in failure",
+    message: "Login failure",
   });
 });
 
@@ -157,7 +156,7 @@ router.get("/logout", (req, res) => {
   req.logout();
   res.status(201).json({
     error: false,
-    message: "Log out successfull",
+    message: "Logout successfull",
   });
 });
 
