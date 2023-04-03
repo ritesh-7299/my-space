@@ -31,7 +31,6 @@ export default function Login() {
         .then((response) => {
           setShowLoader(false);
           if (response.status === 201) {
-            console.log(response);
             dispatch(loginUser(response.data.user));
             navigate("/");
           }
