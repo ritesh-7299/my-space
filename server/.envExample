@@ -1,0 +1,5 @@
+MONGO_URI="<Your mongodb uri"
+CLIENT_ID="<Your google client id>"
+CLIENT_SECRET="<Your google secret key>"
+NASA_API_KEY="<Your NASA api key"
+CLIENT_URL="<Your forntend client url"

@@ -1,0 +1,27 @@
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px #4747470b;
+  backdrop-filter: blur();
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  @apply border-spacing-3 border-gray-50 shrink-0 h-[90%] w-[30%] rounded-3xl py-10 px-7 min-w-max;
+}
+
+.profile_img {
+  @apply border-4 border-gray-100 w-[135px] rounded-full shadow-lg cursor-pointer;
+  @apply hover:border-gray-200;
+}
+
+.textbox {
+  @apply border-0 px-5 py-4 rounded-xl w-3/4 shadow-sm text-lg;
+  @apply focus:outline-none;
+}
+
+.btn {
+  @apply text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-xl px-5 w-3/4 py-4 text-center mr-2 mb-2;
+  /* @apply border bg-black w-3/4 py-4 rounded-lg text-gray-50 text-xl shadow-sm text-center; */
+}
+
+.homebtn {
+  @apply text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2;
+}
