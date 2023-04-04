@@ -117,7 +117,7 @@ Your project is running and you should see below screen..
   <li>EMAIL - riteshmacwan07@gmail.com</li>
   <li>GITHUB - https://github.com/ritesh-7299</li>
 </ul>
-Project Link: [https://github.com/ritesh-7299/my-space](https://github.com/ritesh-7299/my-space)
+Project Link: https://github.com/ritesh-7299/my-space
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
